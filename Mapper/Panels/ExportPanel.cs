@@ -49,7 +49,7 @@ namespace Mapper.Panels
 			CreateLeftPanel();
 			CreateRightPanel();
 			CreateBottomMessage();
-			InitialiseUpdatePanel(this);
+			//InitialiseUpdatePanel(this);
 
 			this.relativePosition = new Vector3(Mathf.Floor((GetUIView().fixedWidth - width) / 2), Mathf.Floor((GetUIView().fixedHeight - height) / 2));
 			this.backgroundSprite = "UnlockingPanel2";
@@ -57,12 +57,12 @@ namespace Mapper.Panels
 
 		}
 
-		private void InitialiseUpdatePanel(UIComponent parent)
-		{
-			_updatePanel = parent.AddUIComponent<UpdatePanel>();
-			_updatePanel.SetPositionSpeakyPoint(new Vector2(parent.position.x, parent.position.y) + new Vector2(parent.size.x - 10, 10));
-			_updatePanel.Initialise(CimToolsHandler.CimToolBase);
-		}
+		//private void InitialiseUpdatePanel(UIComponent parent)
+		//{
+		//	_updatePanel = parent.AddUIComponent<UpdatePanel>();
+		//	_updatePanel.SetPositionSpeakyPoint(new Vector2(parent.position.x, parent.position.y) + new Vector2(parent.size.x - 10, 10));
+		//	_updatePanel.Initialise(CimToolsHandler.CimToolBase);
+		//}
 
 		private void CreateTopMessage()
 		{
@@ -101,7 +101,7 @@ namespace Mapper.Panels
 			UILabel label = this.AddUIComponent<UILabel>();
 			label.text = "Remember to post your maps to <color#94c6ff>http://reddit.com/r/cimtographer</color>,\n" +
 							"and show us what you've made!";
-			label.textScale = 0.6f;
+			label.textScale = 0.3f;
 			label.size = new Vector2(400, 40);
 			label.relativePosition = new Vector2(40, height - 32);
 			label.processMarkup = true;
@@ -141,20 +141,20 @@ namespace Mapper.Panels
 			offset += new Vector2(0, buttonGenerate.height + 20);*/
 
 			UILabel label = this.AddUIComponent<UILabel>();
-			label.text = "<color#94c6ff>Where's the import gone?</color>\n" +
-							"Sorry, but the import functionality\n" +
-							"is something that needs re-developing,\n" +
-							"and doesn't currently work with the\n" +
-							"new code. Since it was the same\n" +
-							"version as the old Cimtographer mod\n" +
-							"you could still use that mod to\n" +
-							"import for now.\n\n" +
+			//label.text = "<color#94c6ff>Where's the import gone?</color>\n" +
+			//				"Sorry, but the import functionality\n" +
+			//				"is something that needs re-developing,\n" +
+			//				"and doesn't currently work with the\n" +
+			//				"new code. Since it was the same\n" +
+			//				"version as the old Cimtographer mod\n" +
+			//				"you could still use that mod to\n" +
+			//				"import for now.\n\n" +
 
-							"<color#94c6ff>Issues?</color>\n" +
-							"If there's any problems with this\n" +
-							"version of the mod, let me know on\n" +
-							"either Reddit or the Workshop.";
-			label.textScale = 0.6f;
+			//				"<color#94c6ff>Issues?</color>\n" +
+			//				"If there's any problems with this\n" +
+			//				"version of the mod, let me know on\n" +
+			//				"either Reddit or the Workshop.";
+			label.textScale = 0.3f;
 			label.size = new Vector2(200, 40);
 			label.relativePosition = offset;
 			label.processMarkup = true;
@@ -263,14 +263,14 @@ namespace Mapper.Panels
 			}
 		}
 
-		private void ButtonWhatsNew_eventClicked(UIComponent component, UIMouseEventParameter eventParam)
-		{
-			if (whatsNewPanel != null)
-			{
-				whatsNewPanel.Show();
-				whatsNewPanel.BringToFront();
-			}
-		}
+		//private void ButtonWhatsNew_eventClicked(UIComponent component, UIMouseEventParameter eventParam)
+		//{
+		//	if (whatsNewPanel != null)
+		//	{
+		//		whatsNewPanel.Show();
+		//		whatsNewPanel.BringToFront();
+		//	}
+		//}
 
 		private void TopLabel_eventClicked(UIComponent component, UIMouseEventParameter eventParam)
 		{
