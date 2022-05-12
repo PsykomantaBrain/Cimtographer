@@ -39,9 +39,14 @@ namespace Mapper.Panels
             label.autoHeight = true;
             label.width = 260;
             label.padding = new RectOffset(0, 40, 0, 0);
-            label.text =    "- <color#c8f582>More road support</color>.\n\n" +
-                            "- <color#c8f582>Snowfall</color> support!.\n\n" +
-                            "- Road definitions now load from XML.";
+            label.text =    "- Supports the new highways from the <color#c8f582>Transit Add-ons</color> mod.\n\n" +
+                            "- Supports all rail from the <color#c8f582>MoreTrainTracks</color> mod.\n\n" +
+                            "- <color#c8f582>Water pipes</color>, can now be selected for export. <color#f4dd81>Maperitive support coming soon</color>.\n\n" +
+                            "- <color#c8f582>Power lines</color>, can also be selected for export. <color#f4dd81>Maperitive support coming soon</color>.\n\n" +
+                            "- <color#c8f582>Water buildings</color> such as water towers and pumps are now properly exported.\n\n" +
+                            "- <color#c8f582>District names</color> can be exported (again).\n\n" +
+                            "- The <color#c8f582>2 lane highway</color> is now treated as a highway and not a ramp.\n\n" +
+                            "- Some backend work.";
             label.textScale = 0.6f;
             label.relativePosition = new Vector2(40, 40);
             label.processMarkup = true;
